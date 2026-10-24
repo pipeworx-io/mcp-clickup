@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-clickup",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "ClickUp MCP — wraps the ClickUp REST API v2 (BYO API key)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-0e3ab1042bf097ec1c3305dbd6970707e1301228e754b481db76a0ae3a766635",
-    "sourceCommit": "b0a4b8e2f3f5b3a4c3f9f2c9a73f91b20d32ce11"
+    "sourceHash": "v1-4c41fd787aad5dc604fa64bb76c0ee87be5ff11bdae9459fd291cefb97e6b281",
+    "sourceCommit": "f1ef7a2f6b9cb1b8da1374ec2fcb28c661582b35"
   }
 }
