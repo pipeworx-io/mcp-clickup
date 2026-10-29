@@ -1,0 +1,128 @@
+[
+  {
+    "name": "clickup_list_tasks",
+    "description": "List all tasks in a ClickUp list. Returns task ID, name, status, priority, assignees, due date, and URL. Provide list ID (e.g., \"123456\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "ClickUp API token"
+        },
+        "list_id": {
+          "type": "string",
+          "description": "List ID to fetch tasks from"
+        },
+        "page": {
+          "type": "number",
+          "description": "Page number (0-indexed, default 0)"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "list_id"
+      ]
+    }
+  },
+  {
+    "name": "clickup_get_task",
+    "description": "Fetch full task details including name, description, status, priority, assignees, tags, and time tracking. Provide task ID (e.g., \"9hz6c\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "ClickUp API token"
+        },
+        "task_id": {
+          "type": "string",
+          "description": "Task ID"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "task_id"
+      ]
+    }
+  },
+  {
+    "name": "clickup_create_task",
+    "description": "Create a new task in a ClickUp list. Provide list ID, task name, and optionally priority and assignee. Returns task ID, name, status, and URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "ClickUp API token"
+        },
+        "list_id": {
+          "type": "string",
+          "description": "List ID to create the task in"
+        },
+        "name": {
+          "type": "string",
+          "description": "Task name"
+        },
+        "description": {
+          "type": "string",
+          "description": "Task description (markdown supported)"
+        },
+        "priority": {
+          "type": "number",
+          "description": "Priority: 1 (urgent), 2 (high), 3 (normal), 4 (low)"
+        },
+        "due_date": {
+          "type": "number",
+          "description": "Due date as Unix timestamp in milliseconds"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "list_id",
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "clickup_list_spaces",
+    "description": "List all spaces in your ClickUp workspace. Returns space ID, name, and status.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "ClickUp API token"
+        },
+        "team_id": {
+          "type": "string",
+          "description": "Team/workspace ID"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "team_id"
+      ]
+    }
+  },
+  {
+    "name": "clickup_list_folders",
+    "description": "List all folders in a ClickUp space. Provide space ID (e.g., \"789\"). Returns folder ID, name, and list count.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "ClickUp API token"
+        },
+        "space_id": {
+          "type": "string",
+          "description": "Space ID"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "space_id"
+      ]
+    }
+  }
+]
